@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestor de Inventario</title>
+    <link rel="stylesheet" href="./css/styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/luxon/2.3.0/luxon.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="inventarioBotones">
+            <h1 class="tituloIndex">Gestor de Inventario</h1>
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre">
+            <label for="cantidad">Cantidad:</label>
+            <input type="number" id="cantidad">
+            <div>
+                <label for="categoria">Categoría:</label>
+                <select id="categoria">
+                    <option value="Vehículos">Vehículos</option>
+                    <option value="Repuestos">Repuestos</option>
+                    <option value="Electrónica">Electrónica</option>
+                    <option value="Articulos de limpieza">Artículos de limpieza</option>
+                    <option value="Herramientas">Herramientas</option>
+                    <option value="Varios">Varios</option>
+                </select>
+            </div>
+            <div>
+                <label for="sede">Sede:</label>
+                <select id="sede">
+                    <option value="Tierra Del Fuego">Tierra Del Fuego</option>
+                    <option value="Rio Cuarto">Rio Cuarto</option>
+                    <option value="Costa">Costa</option>
+                    <option value="Misiones">Misiones</option>
+                    <option value="Tucuman">Tucuman</option>
+                    <option value="Santa Fe">Santa Fe</option>
+                </select>
+            </div>
+            <button id="agregar">Insertar Producto</button>
+        </div>
+    </div>
+
+    <div id="categorias" class="categorias-container"></div>
+
+    <div class="busqueda">
+        <input type="text" id="buscarNombre" placeholder="Buscar por nombre">
+        <select id="buscarCategoria">
+            <option value="">Todas las categorías</option>
+            <option value="Vehículos">Vehículos</option>
+            <option value="Repuestos">Repuestos</option>
+            <option value="Electrónica">Electrónica</option>
+            <option value="Articulos de limpieza">Artículos de limpieza</option>
+            <option value="Herramientas">Herramientas</option>
+            <option value="Varios">Varios</option>
+        </select>
+        <button id="buscar">Buscar</button>
+    </div>
+
+    <h2 class="subtituloIndex">Inventario</h2>
+    <ol id="inventario"></ol>
+
+    <script src="./js/main.js"></script>
+</body>
+
+</html>
